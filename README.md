@@ -49,7 +49,7 @@ I'm definitely curious about how chord recognition works in general, so we decid
 
 
 ## Algorithms
-![algorithm](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/algorithm.png)
+![algorithm](https://raw.githubusercontent.com/userid/chord-recognition/master/visualizations/algorithm.png)
 
 #### Chromagram Calculation
 The Chromagram could be constructed as spectrograms, which represents the relationship between time and frequency spectrum.
@@ -67,11 +67,11 @@ We can easily identify which pitches being the strongest according to the color.
 Given the audio ```PianoChordsElectric.wav``` provided under the ```audiosamples``` directory, here's the Chromagram produced by analyzing the wave file between 0:00 - 0:50.
 For the rest of our analysis, we always uses this segment of the wave file.
 
-![set1](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/set1.png)
+![set1](https://raw.githubusercontent.com/userid/chord-recognition/master/visualizations/set1.png)
 
 Here's another chromagram produced by analyzing the same wave file between 0:55 - 1:45.
 
-![set2](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/set2.png)
+![set2](https://raw.githubusercontent.com/userid/chord-recognition/master/visualizations/set2.png)
 
 #### Chordgram Calculation
 The next thing we need to do is to determine the chord probabilities from the chroma vectors we have calculated from the previous step.
@@ -96,7 +96,7 @@ Since we want to improve the ability of our algorithm to detect complex chords, 
 By computing the cosine similarity between chroma vectors and the template for each frame, we obtain the Chordgram as a result. 
 
 Here's the Chordgram produced.
-![chordgram](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/chordgram.png)
+![chordgram](https://raw.githubusercontent.com/userid/chord-recognition/master/visualizations/chordgram.png)
 
 #### Chord Sequence Estimation
 We can also estimate the chord sequences from the Chordgram obtained.
@@ -112,7 +112,7 @@ We may also repeat the smoothing process to obtain a more accurate results.
     R[r] = mode { R[r - w / 2], ..., R[r + w / 2]}
 
 Here's the Chordgram produced after smoothing.
-![chordgram-smoothed](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/chordgram-smoothed.png)
+![chordgram-smoothed](https://raw.githubusercontent.com/userid/chord-recognition/master/visualizations/chordgram-smoothed.png)
 
 ###### Results
 According to the smoothed Chordgram, we obtain the most likely chord for each frame using cosine similarity.
